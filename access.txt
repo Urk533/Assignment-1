@@ -1,0 +1,21 @@
+homepageurl: https://as1.v.je/index.php
+
+Admin Users:
+User1:
+adminuser: mohan1
+adminpass: lal
+
+User2:
+adminuser: pari34
+adminpass: besh
+
+
+
+Non-admin Users:
+User1:
+nonadminuser: utsavvkharell@gmail.com
+nonadminpassword: kharel
+
+User2:
+nonadminuser: laxmi11@gmail.com
+nonadminpassword: devkota
