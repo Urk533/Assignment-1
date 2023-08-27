@@ -208,7 +208,7 @@ require 'headerFile.php';
             if(isset($_POST['editAuc'])){
 
                     //Below editAucStmt contains the query that upadtes the auction details as the admin wish
-                    $editAucStmt = $pdo->prepare('UPDATE auction SET title = :editAucTitle, description = :editAucDesc, categoryId = :editAucCategId, endDate = :editLastDate WHERE auctionId = :editAucId');
+                    $editAucStmt = $pdo->prepare('UPDATE auction SET title = :editAucTitle, description = :editAucDesc, categoryId = :editAucCategId, bidValue = :editAuctionVal, endDate = :editLastDate WHERE auctionId = :editAucId');
 
                     //editAucCriteria variable is used to provide value of required columns of auctions table for updating in 
                     //editAucStmt variable code
@@ -226,6 +226,9 @@ require 'headerFile.php';
                         //editAucCategId variable contains value of auction category type that the user has selected through select box
                         //for updating
                         'editAucCategId' => $_POST['categorySelection'],
+
+                        //editAuctionVal variable contains value of auction price that the user has choosed for updating purpose                    
+                        'editAuctionVal' => $_POST['priceAuction'],
 
                         //editLastDate variable contains value of auction end date that the user has choosed or typed in for updating
                         'editLastDate' => $_POST['editFinalDate']
